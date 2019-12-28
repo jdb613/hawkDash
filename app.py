@@ -21,7 +21,7 @@ exclusions = [x.strip(' ') for x in exclusions]
 hawk_mode = str(os.getenv('HAWK_MODE'))
 print('Currently Running in {}'.format(hawk_mode))
 
-start_date = "2019-10-01"
+start_date = str(os.getenv('START_DATE'))
 
 master_data = utilities.getData(hawk_mode, exclusions, start_date)
 
@@ -45,7 +45,7 @@ rel_fig = utilities.relativeFig(rel_data)
 df = utilities.transactionTables(master_data['all_trnsx'], start_date, exclusions, hawk_mode)
 
 app = dash.Dash(__name__)
-# server = app.server
+server = app.server
 
 def serve_layout():
     return html.Div([
