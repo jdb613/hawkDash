@@ -19,7 +19,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-numpy==1.18.0
+numpy==1.22.0
 pandas==0.25.3
 plaid-python==3.4.0
 plotly==4.4.1
